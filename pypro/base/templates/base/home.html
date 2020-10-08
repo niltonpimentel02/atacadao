@@ -1,8 +1,15 @@
+<head>
+    <title>Atacadão Python Pro - Home</title>
+</head>
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
     <h1>Produtos em Promoção</h1>
-    <h4>Testando GitHub Actions =)</h4>
-
-
+    <ol>
+        {% for produto in produtos %}
+        <li>
+            {{ produto.descricao }} - {{ produto.cor }} - {{ produto.peso }}
+        </li>
+        {% endfor %}
+    </ol>
 {% endblock %}
